@@ -7,38 +7,50 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-// PaymentRepository.java
 public class PaymentRepository implements IPaymentRepository {
-    private static final Map<String, Payment> paymentDatabase = new HashMap<>();
+    private static PaymentRepository repository = null;
+    private Map<String, Payment> paymentMap;
 
-    @Override
-    public List<Payment> getAll() {
-        return new ArrayList<>(paymentDatabase.values());
+    private PaymentRepository() {
+        paymentMap = new HashMap<>();
+    }
+
+    public static PaymentRepository getRepository() {
+        if (repository == null) {
+            repository = new PaymentRepository();
+        }
+        return repository;
     }
 
     @Override
     public Payment create(Payment payment) {
-        paymentDatabase.put(payment.getPaymentID(), payment);
+        paymentMap.put(payment.getPaymentID(), payment);
         return payment;
     }
 
     @Override
     public Payment read(String paymentID) {
-        return paymentDatabase.get(paymentID);
+        return paymentMap.get(paymentID);
     }
 
     @Override
     public Payment update(Payment payment) {
-        paymentDatabase.put(payment.getPaymentID(), payment);
+        paymentMap.put(payment.getPaymentID(), payment);
         return payment;
     }
 
     @Override
     public boolean delete(String paymentID) {
-        if (paymentDatabase.containsKey(paymentID)) {
-            paymentDatabase.remove(paymentID);
+        Payment paymentToDelete = read(paymentID);
+        if (paymentToDelete != null) {
+            paymentMap.remove(paymentID);
             return true;
         }
         return false;
+    }
+
+    @Override
+    public List<Payment> getAll() {
+        return new ArrayList<>(paymentMap.values());
     }
 }
