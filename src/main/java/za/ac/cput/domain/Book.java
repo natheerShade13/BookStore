@@ -9,12 +9,12 @@ Author: Natheer Shade 217159109 13/03/2024
  */
 public class Book {
 
-    private String bookID;
-    private String title;
-    private String author;
-    private String genre;
-    private int price;
-    private int stockQaunt;
+    private final String bookID;
+    private final String title;
+    private final String author;
+    private final String genre;
+    private final int price;
+    private final int stockQaunt;
 
     public Book(Builder builder){
         this.bookID = builder.bookID;
