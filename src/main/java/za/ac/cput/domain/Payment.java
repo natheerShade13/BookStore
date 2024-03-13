@@ -35,6 +35,16 @@ public class Payment {
         return Objects.hash(paymentID, amount, paymentDate, paymentMethod);
     }
 
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "paymentID='" + paymentID + '\'' +
+                ", amount=" + amount +
+                ", paymentDate=" + paymentDate +
+                ", paymentMethod='" + paymentMethod + '\'' +
+                '}';
+    }
+
     // Builder Pattern
     public static class Builder {
         private String paymentID;
