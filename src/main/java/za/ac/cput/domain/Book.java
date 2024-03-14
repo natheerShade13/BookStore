@@ -27,27 +27,27 @@ public class Book {
 
     }
 
-    public String bookID() {
+    public String getBookID() {
         return bookID;
     }
 
-    public String title() {
+    public String getTitle() {
         return title;
     }
 
-    public String author() {
+    public String getAuthor() {
         return author;
     }
 
-    public String genre() {
+    public String getGenre() {
         return genre;
     }
 
-    public int price() {
+    public int getPrice() {
         return price;
     }
 
-    public int stockQaunt() {
+    public int getStockQaunt() {
         return stockQaunt;
     }
 
@@ -112,6 +112,16 @@ public class Book {
 
         public Builder setStockQaunt(int stockQaunt) {
             this.stockQaunt = stockQaunt;
+            return this;
+        }
+
+        public Builder copy(Book book) {
+            this.bookID = book.bookID;
+            this.title = book.title;
+            this.author = book.author;
+            this.genre = book.genre;
+            this.price = book.price;
+            this.stockQaunt = book.stockQaunt;
             return this;
         }
 
