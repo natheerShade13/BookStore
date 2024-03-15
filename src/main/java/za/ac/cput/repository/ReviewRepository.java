@@ -2,31 +2,73 @@ package za.ac.cput.repository;
 
 import za.ac.cput.domain.Review;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ReviewRepository implements IReviewRepository{
+public class ReviewRepository implements IReviewRepository {
+
+    private static IReviewRepository repository = null;
+
+    private final List<Review> reviewsList;
+
+    private ReviewRepository() {
+        reviewsList = new ArrayList<Review>();
+    }
+
+    public static IReviewRepository getRepository() {
+        if (repository == null) {
+            repository = new ReviewRepository();
+        }
+        return repository;
+    }
+
+    @Override
+    public List<Review> getAll() {
+        return reviewsList;
+    }
+
     @Override
     public Review create(Review review) {
+        boolean success = reviewsList.add(review);
+        if (success) {
+            return review;
+        }
         return null;
     }
 
     @Override
-    public Review read(String s) {
+    public Review read(int reviewID) {
+        for (Review review : reviewsList) {
+            if (review.getReviewID() == reviewID) {
+                return review;
+            }
+        }
         return null;
     }
 
     @Override
     public Review update(Review review) {
+        int reviewID = review.getReviewID();
+        Review oldReview = read(reviewID);
+
+        if (oldReview == null) {
+            return null;
+        }
+
+        boolean success = delete(reviewID);
+        if (success) {
+            reviewsList.add(review);
+            return review;
+        }
         return null;
     }
 
     @Override
-    public boolean delete(String s) {
-        return false;
-    }
-
-    @Override
-    public List<Review> getAll() {
-        return null;
+    public boolean delete(int reviewID) {
+        Review reviewToDelete = read(reviewID);
+        if (reviewToDelete == null) {
+            return false;
+        }
+        return reviewsList.remove(reviewToDelete);
     }
 }
