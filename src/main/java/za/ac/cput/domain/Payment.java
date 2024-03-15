@@ -1,71 +1,85 @@
 package za.ac.cput.domain;
 
 import java.util.Date;
+import java.util.Objects;
 
-// Payment.java
+/*
+
+Author: Chadwin Kyle Fritz 218068360 15/03/2024
+
+ */
+
 public class Payment {
-    private String paymentID;
-    private String orderID;
-    private double amount;
-    private Date paymentDate;
-    private String paymentMethod;
+    private final String paymentID;
+    private final double amount;
+    private final Date paymentDate;
+    private final String paymentMethod;
 
-    public Payment(String paymentID, String orderID, double amount, Date paymentDate, String paymentMethod) {
-        this.paymentID = paymentID;
-        this.orderID = orderID;
-        this.amount = amount;
-        this.paymentDate = paymentDate;
-        this.paymentMethod = paymentMethod;
+    private Payment(Builder builder) {
+        this.paymentID = builder.paymentID;
+        this.amount = builder.amount;
+        this.paymentDate = builder.paymentDate;
+        this.paymentMethod = builder.paymentMethod;
     }
 
-    public String getPaymentID() {
-        return paymentID;
+    // Getters
+    public String getPaymentID() { return paymentID; }
+    public double getAmount() { return amount; }
+    public Date getPaymentDate() { return paymentDate; }
+    public String getPaymentMethod() { return paymentMethod; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Payment payment = (Payment) o;
+        return Double.compare(amount, payment.amount) == 0 && Objects.equals(paymentID, payment.paymentID) && Objects.equals(paymentDate, payment.paymentDate) && Objects.equals(paymentMethod, payment.paymentMethod);
     }
 
-    public void setPaymentID(String paymentID) {
-        this.paymentID = paymentID;
-    }
-
-    public String getOrderID() {
-        return orderID;
-    }
-
-    public void setOrderID(String orderID) {
-        this.orderID = orderID;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public Date getPaymentDate() {
-        return paymentDate;
-    }
-
-    public void setPaymentDate(Date paymentDate) {
-        this.paymentDate = paymentDate;
-    }
-
-    public String getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    public void setPaymentMethod(String paymentMethod) {
-        this.paymentMethod = paymentMethod;
+    @Override
+    public int hashCode() {
+        return Objects.hash(paymentID, amount, paymentDate, paymentMethod);
     }
 
     @Override
     public String toString() {
         return "Payment{" +
                 "paymentID='" + paymentID + '\'' +
-                ", orderID='" + orderID + '\'' +
                 ", amount=" + amount +
                 ", paymentDate=" + paymentDate +
                 ", paymentMethod='" + paymentMethod + '\'' +
                 '}';
+    }
+
+    // Builder Pattern
+    public static class Builder {
+        private String paymentID;
+        private double amount;
+        private Date paymentDate;
+        private String paymentMethod;
+
+        public Builder setPaymentID(String paymentID) {
+            this.paymentID = paymentID;
+            return this;
+        }
+
+        public Builder setAmount(double amount) {
+            this.amount = amount;
+            return this;
+        }
+
+        public Builder setPaymentDate(Date paymentDate) {
+            this.paymentDate = paymentDate;
+            return this;
+        }
+
+        public Builder setPaymentMethod(String paymentMethod) {
+            this.paymentMethod = paymentMethod;
+            return this;
+        }
+
+        public Payment build() {
+            return new Payment(this);
+        }
     }
 }
