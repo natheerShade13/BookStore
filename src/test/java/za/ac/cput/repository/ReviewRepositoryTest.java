@@ -7,15 +7,17 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Review;
-import za.ac.cput.domain.Review.Builder;
 import za.ac.cput.factory.ReviewFactory;
 
+/*
+Author: Mmabotse Christinah Mosima 221804854  15/03/2024
+ */
     @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
     class ReviewRepositoryTest {
 
         private static IReviewRepository repository = ReviewRepository.getRepository();
 
-        private Review review1 = ReviewFactory.createBookReview("Jujutsu Kaisen", "Natheer", "John Doe", 5, "A thrilling manga series.");
+        private Review review1 = ReviewFactory.createBookReview("B122345", "IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
 
         @Test
         @Order(4)
@@ -34,7 +36,7 @@ import za.ac.cput.factory.ReviewFactory;
         @Test
         @Order(2)
         void read() {
-            int reviewID = review1.getReviewID();
+            String reviewID = review1.getreviewID();
             Review read = repository.read(reviewID);
             assertNotNull(read);
             System.out.println(read);
@@ -52,7 +54,7 @@ import za.ac.cput.factory.ReviewFactory;
         @Test
         @Order(5)
         void delete() {
-            assertTrue(repository.delete(review1.getReviewID()));
+            assertTrue(repository.delete(review1.getreviewID()));
             System.out.println("Successfully deleted");
         }
     }

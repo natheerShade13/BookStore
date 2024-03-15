@@ -8,7 +8,12 @@ public interface IReviewRepository extends IRepository<Review, String>{
 
     List<Review> getAll();
 
-    Review read(int reviewID);
+    Review create(Review review1);
+    Review read(String reviewID);
 
-    boolean delete(int reviewID);
+    Review update(Review newReview);
+
+    boolean delete(String reviewID);
+
+    List<Review> getall();
 }

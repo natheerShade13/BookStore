@@ -1,9 +1,12 @@
 package za.ac.cput.repository;
 
 import za.ac.cput.domain.Review;
-
 import java.util.ArrayList;
 import java.util.List;
+
+/*
+Author: Mmabotse Christinah Mosima 221804854  15/03/2024
+ */
 
 public class ReviewRepository implements IReviewRepository {
 
@@ -37,9 +40,9 @@ public class ReviewRepository implements IReviewRepository {
     }
 
     @Override
-    public Review read(int reviewID) {
+    public Review read(String reviewID) {
         for (Review review : reviewsList) {
-            if (review.getReviewID() == reviewID) {
+            if (review.getreviewID().equals(reviewID)) {
                 return review;
             }
         }
@@ -48,7 +51,7 @@ public class ReviewRepository implements IReviewRepository {
 
     @Override
     public Review update(Review review) {
-        int reviewID = review.getReviewID();
+        String reviewID = review.getreviewID();
         Review oldReview = read(reviewID);
 
         if (oldReview == null) {
@@ -64,11 +67,14 @@ public class ReviewRepository implements IReviewRepository {
     }
 
     @Override
-    public boolean delete(int reviewID) {
+    public boolean delete(String reviewID) {
         Review reviewToDelete = read(reviewID);
         if (reviewToDelete == null) {
             return false;
         }
         return reviewsList.remove(reviewToDelete);
     }
+
+    @Override
+    public List<Review> getall() { return reviewsList;}
 }
