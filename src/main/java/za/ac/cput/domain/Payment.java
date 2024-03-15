@@ -26,32 +26,16 @@ public class Payment {
         return paymentID;
     }
 
-    public void setPaymentID(String paymentID) {
-        this.paymentID = paymentID;
-    }
-
     public int getAmount() {
         return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
     }
 
     public Date getPaymentDate() {
         return paymentDate;
     }
 
-    public void setPaymentDate(Date paymentDate) {
-        this.paymentDate = paymentDate;
-    }
-
     public String getPaymentMethod() {
         return paymentMethod;
-    }
-
-    public void setPaymentMethod(String paymentMethod) {
-        this.paymentMethod = paymentMethod;
     }
 
     @Override
