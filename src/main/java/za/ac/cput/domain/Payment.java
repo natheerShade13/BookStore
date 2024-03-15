@@ -10,10 +10,10 @@ Author: Chadwin Kyle Fritz 218068360 15/03/2024
  */
 
 public class Payment {
-    private final String paymentID;
-    private final int amount;
-    private final Date paymentDate;
-    private final String paymentMethod;
+    private String paymentID;
+    private int amount;
+    private Date paymentDate;
+    private String paymentMethod;
 
     private Payment(Builder builder) {
         this.paymentID = builder.paymentID;
@@ -26,16 +26,32 @@ public class Payment {
         return paymentID;
     }
 
+    public void setPaymentID(String paymentID) {
+        this.paymentID = paymentID;
+    }
+
     public int getAmount() {
         return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public Date getPaymentDate() {
         return paymentDate;
     }
 
+    public void setPaymentDate(Date paymentDate) {
+        this.paymentDate = paymentDate;
+    }
+
     public String getPaymentMethod() {
         return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
     @Override
@@ -70,22 +86,22 @@ public class Payment {
         private Date paymentDate;
         private String paymentMethod;
 
-        public Builder paymentID(String paymentID) {
+        public Builder setPaymentID(String paymentID) {
             this.paymentID = paymentID;
             return this;
         }
 
-        public Builder amount(int amount) {
+        public Builder setAmount(int amount) {
             this.amount = amount;
             return this;
         }
 
-        public Builder paymentDate(Date paymentDate) {
+        public Builder setPaymentDate(Date paymentDate) {
             this.paymentDate = paymentDate;
             return this;
         }
 
-        public Builder paymentMethod(String paymentMethod) {
+        public Builder setPaymentMethod(String paymentMethod) {
             this.paymentMethod = paymentMethod;
             return this;
         }
@@ -93,14 +109,13 @@ public class Payment {
         public Payment build() {
             return new Payment(this);
         }
-    }
 
-    public Payment copy() {
-        return new Builder()
-                .paymentID(paymentID)
-                .amount(amount)
-                .paymentDate(paymentDate)
-                .paymentMethod(paymentMethod)
-                .build();
+        public Builder copy(Payment payment) {
+            this.paymentID = payment.getPaymentID();
+            this.amount = payment.getAmount();
+            this.paymentDate = payment.getPaymentDate();
+            this.paymentMethod = payment.getPaymentMethod();
+            return this;
+        }
     }
 }
