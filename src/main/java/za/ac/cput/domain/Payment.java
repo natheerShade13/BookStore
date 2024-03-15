@@ -11,7 +11,7 @@ Author: Chadwin Kyle Fritz 218068360 15/03/2024
 
 public class Payment {
     private final String paymentID;
-    private final double amount;
+    private final int amount;
     private final Date paymentDate;
     private final String paymentMethod;
 
@@ -26,7 +26,7 @@ public class Payment {
         return paymentID;
     }
 
-    public double getAmount() {
+    public int getAmount() {
         return amount;
     }
 
@@ -43,7 +43,7 @@ public class Payment {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Payment payment = (Payment) o;
-        return Double.compare(payment.amount, amount) == 0 &&
+        return amount == payment.amount &&
                 Objects.equals(paymentID, payment.paymentID) &&
                 Objects.equals(paymentDate, payment.paymentDate) &&
                 Objects.equals(paymentMethod, payment.paymentMethod);
@@ -66,7 +66,7 @@ public class Payment {
 
     public static class Builder {
         private String paymentID;
-        private double amount;
+        private int amount;
         private Date paymentDate;
         private String paymentMethod;
 
@@ -75,7 +75,7 @@ public class Payment {
             return this;
         }
 
-        public Builder amount(double amount) {
+        public Builder amount(int amount) {
             this.amount = amount;
             return this;
         }
