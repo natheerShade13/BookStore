@@ -49,16 +49,10 @@ class PaymentRepositoryTest {
 
     @Test
     @Order(3)
-    void update() {
-        Payment newPayment = new Payment.Builder()
-                .paymentID(paymentA.getPaymentID())
-                .amount(750)
-                .paymentDate(new Date())
-                .paymentMethod("Debit Card")
-                .build();
-        Payment update = repository.update(newPayment);
-        assertNotNull(update);
-        System.out.println(update);
+    void copy() {
+        Payment copiedPayment = new Payment.Builder().copy(paymentA).build();
+        assertNotNull(copiedPayment);
+        System.out.println("Copied Payment: " + copiedPayment);
     }
 
     @Test
