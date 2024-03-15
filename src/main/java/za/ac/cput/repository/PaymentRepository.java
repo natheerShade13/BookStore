@@ -3,10 +3,13 @@ package za.ac.cput.repository;
 import za.ac.cput.domain.Book;
 import za.ac.cput.domain.Payment;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+/*
+
+Author: Chadwin Kyle Fritz 218068360 15/03/2024
+
+ */
 
 public class PaymentRepository implements IPaymentRepository {
     @Override
