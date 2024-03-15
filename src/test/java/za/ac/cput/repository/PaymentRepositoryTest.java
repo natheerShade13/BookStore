@@ -50,9 +50,13 @@ class PaymentRepositoryTest {
     @Test
     @Order(3)
     void copy() {
-        Payment copiedPayment = new Payment.Builder().copy(paymentA).build();
-        assertNotNull(copiedPayment);
-        System.out.println("Copied Payment: " + copiedPayment);
+        Payment newPayment = new Payment.Builder()
+                .copy(paymentA)
+                .setAmount(750)
+                .build();
+        Payment update = repository.update(newPayment);
+        assertNotNull(update);
+        System.out.println(update);
     }
 
     @Test
