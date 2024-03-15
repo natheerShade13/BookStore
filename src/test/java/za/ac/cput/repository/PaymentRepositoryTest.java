@@ -62,17 +62,17 @@ class PaymentRepositoryTest {
     @Order(4)
     void testUpdatePayment() {
         Payment updatedPaymentA = new Payment.Builder()
-                .paymentID(paymentA.getPaymentID())
-                .amount(500)
-                .paymentDate(new Date())
-                .paymentMethod("Debit Card")
+                .setPaymentID(paymentA.getPaymentID())
+                .setAmount(500)
+                .setPaymentDate(new Date())
+                .setPaymentMethod("Debit Card")
                 .build();
 
         Payment updatedPaymentB = new Payment.Builder()
-                .paymentID(paymentB.getPaymentID())
-                .amount(1000)
-                .paymentDate(new Date())
-                .paymentMethod("Credit Card")
+                .setPaymentID(paymentB.getPaymentID())
+                .setAmount(1000)
+                .setPaymentDate(new Date())
+                .setPaymentMethod("Credit Card")
                 .build();
 
         Payment resultA = repository.update(updatedPaymentA);
