@@ -21,7 +21,7 @@ class PaymentFactoryTest {
 
     private final Payment paymentA = PaymentFactory.createPayment("987654", 500, new Date(), "Credit Card");
 
-    private final Payment paymentB = PaymentFactory.createPayment("456789", 1000, new Date(), "Debit Card");
+    private final Payment paymentB = PaymentFactory.createPayment(1000, new Date(), "Debit Card");
 
     @Test
     @Order(1)
