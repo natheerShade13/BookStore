@@ -24,9 +24,4 @@ public class Helper {
     public static String generateID(){
         return UUID.randomUUID().toString();
     }
-
-    public static int generateReviewID() {
-        return  UUID.randomUUID().hashCode();
-    }
-
 }
