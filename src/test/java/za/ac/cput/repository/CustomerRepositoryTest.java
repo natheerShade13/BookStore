@@ -22,7 +22,6 @@ class CustomerRepositoryTest {
         Customer add = repository.create(customer);
         assertNotNull(add);
         System.out.println(add);
-        System.out.println(add);
         Customer add2 = repository.create(customer2);
         assertNotNull(add2);
         System.out.println(add2);
