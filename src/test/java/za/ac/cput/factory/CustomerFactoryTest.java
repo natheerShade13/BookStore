@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CustomerFactoryTest {
 
     @Test
-    void TestBuildCustomer() {
+    void TestBuildCustomerA() {
         Customer c= CustomerFactory.buildCustomer("3456","keitu",
                 "dimpe","kafhm@gmail.com","143 lowry street",
                 "+27 67 789 9875");
@@ -18,7 +18,7 @@ class CustomerFactoryTest {
 
     }
     @Test
-    void testBuildCustomerWithFail(){
+    void testBuildCustomerB(){
         Customer c2= CustomerFactory.buildCustomer("Leago",
                 "Maphothoma","KarinLeaMH@gmail.com","11829 Tima Street",
                 "+27 84 995 9282");
