@@ -75,7 +75,4 @@ public class ReviewRepository implements IReviewRepository {
         }
         return reviewsList.remove(reviewToDelete);
     }
-
-    @Override
-    public List<Review> getall() { return reviewsList;}
 }

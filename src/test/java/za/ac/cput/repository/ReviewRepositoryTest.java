@@ -13,49 +13,49 @@ import za.ac.cput.factory.ReviewFactory;
 
 Author: Mmabotse Christinah Mosima 221804854 15/03/2024
  */
-    @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-    class ReviewRepositoryTest {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class ReviewRepositoryTest {
 
-        private static IReviewRepository repository = ReviewRepository.getRepository();
+    private static IReviewRepository repository = ReviewRepository.getRepository();
 
-        private Review review1 = ReviewFactory.createBookReview("B122345", "IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
+    private Review review1 = ReviewFactory.createBookReview("B122345", "IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
 
-        @Test
-        @Order(4)
-        void getAll() {
-            System.out.println(repository.getAll());
-        }
-
-        @Test
-        @Order(1)
-        void create() {
-            Review add = repository.create(review1);
-            assertNotNull(add);
-            System.out.println(add);
-        }
-
-        @Test
-        @Order(2)
-        void read() {
-            String reviewID = review1.getreviewID();
-            Review read = repository.read(reviewID);
-            assertNotNull(read);
-            System.out.println(read);
-        }
-
-        @Test
-        @Order(3)
-        void update() {
-            Review newReview = new Review.Builder().copy(review1).setRating(4).build();
-            Review update = repository.update(newReview);
-            assertNotNull(update);
-            System.out.println(update);
-        }
-
-        @Test
-        @Order(5)
-        void delete() {
-            assertTrue(repository.delete(review1.getreviewID()));
-            System.out.println("Successfully deleted");
-        }
+    @Test
+    @Order(4)
+    void getAll() {
+        System.out.println(repository.getAll());
     }
+
+    @Test
+    @Order(1)
+    void create() {
+        Review add = repository.create(review1);
+        assertNotNull(add);
+        System.out.println(add);
+    }
+
+    @Test
+    @Order(2)
+    void read() {
+        String reviewID = review1.getreviewID();
+        Review read = repository.read(reviewID);
+        assertNotNull(read);
+        System.out.println(read);
+    }
+
+    @Test
+    @Order(3)
+    void update() {
+        Review newReview = new Review.Builder().copy(review1).setRating(4).build();
+        Review update = repository.update(newReview);
+        assertNotNull(update);
+        System.out.println(update);
+    }
+
+    @Test
+    @Order(5)
+    void delete() {
+        assertTrue(repository.delete(review1.getreviewID()));
+        System.out.println("Successfully deleted");
+    }
+}
