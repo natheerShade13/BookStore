@@ -4,7 +4,7 @@ import za.ac.cput.domain.Book;
 
 import java.util.List;
 
-public interface IBookRepository extends IRepository<Book, String> {
+public interface IBookRepository extends IRepository<Book, String>{
 
     List<Book> getAll();
 
