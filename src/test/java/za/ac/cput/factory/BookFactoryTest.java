@@ -14,6 +14,7 @@ class BookFactoryTest {
     private final Book b1 = BookFactory.buildBook("647389578", "Jujutsu Kaisen", "Natheer"
             , "Fantasy", 1500, 3);
 
+
     private final Book b2 = BookFactory.buildBook("Solo Leveling", "Natheer"
             , "Fantasy", 500, 10);
 

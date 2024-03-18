@@ -1,6 +1,6 @@
 package za.ac.cput.domain;
 //221715126
-import java.util.List;
+
 import java.util.Objects;
 
 public class ShoppingCart {
@@ -32,8 +32,8 @@ public int hashCode(){return Objects.hash(cartID,items);
 }
 
 public String toString(){
-    return "ShoppingCart{"+"CartID ="+ cartID+"\n"+
-            "Items ="+ items;
+    return "ShoppingCart{"+"CartID = '"+ cartID+'\''+
+            " Items ="+ items + "}";
 }
 
     public static class Builder{
