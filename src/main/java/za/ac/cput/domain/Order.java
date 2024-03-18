@@ -1,4 +1,9 @@
 package za.ac.cput.domain;
+/*Order.java
+Order Model clas
+Author: Motlalepula Mbali Kgatlhane
+Date: 18 March
+ */
 
 import java.util.Date;
 import java.util.Objects;
