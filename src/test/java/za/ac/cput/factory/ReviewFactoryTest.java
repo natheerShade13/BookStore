@@ -17,16 +17,16 @@ class ReviewFactoryTest {
 
     @Test
     @Order(1)
-    void CreateBookReview() {
+    void CreateBookReviewA() {
         Review review1 = ReviewFactory.createBookReview("JB122345", "IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
         assertNotNull(review1);
         System.out.println(review1.toString());
     }
 
     @Test
-    @Order(1)
-    void buildBookReviewWithFail() {
-        Review review2 = ReviewFactory.createBookReview("B12345", "IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
+    @Order(2)
+    void buildBookReviewB() {
+        Review review2 = ReviewFactory.createBookReview("IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
         assertNotNull(review2);
         System.out.println(review2.toString());
     }
