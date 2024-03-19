@@ -20,11 +20,6 @@ public class Helper {
             return true;
         return false;
     }
-    public static boolean isNegative(int b){
-        if(b < 0)
-            return true;
-        return false;
-    }
 
     public static String generateID(){
         return UUID.randomUUID().toString();
