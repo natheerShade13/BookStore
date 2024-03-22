@@ -26,14 +26,14 @@ public class OrderFactory {
         if (orderDate == null || Helper.isNegative(totalAmount) || Helper.isNullOrEmpty(status)) {
             return null;
         }
+
+        String orderNum = Helper.generateID();
+
         return new Order.Builder()
+                .setOrderID(orderNum)
                 .setOrderDate(orderDate)
                 .setTotalAmount(totalAmount)
                 .setStatus(status)
                 .build();
-    }
-
-    private static String generateOrderID(){
-        return Helper.generateID();
     }
 }
