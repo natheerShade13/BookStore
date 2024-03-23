@@ -9,10 +9,10 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Order {
-    private  String orderID;
+    private   String orderID;
     private Date orderDate;
-    private int totalAmount;
-    private String status;
+    private  double totalAmount;
+    private  String status;
 
 
 
@@ -32,7 +32,7 @@ public class Order {
         return orderDate;
     }
 
-    public int getTotalAmount() {
+    public double getTotalAmount() {
         return totalAmount;
     }
 
@@ -45,7 +45,7 @@ public class Order {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Order order = (Order) o;
-        return totalAmount == order.totalAmount && Objects.equals(orderID, order.orderID) && Objects.equals(orderDate, order.orderDate) && Objects.equals(status, order.status);
+        return Double.compare(totalAmount, order.totalAmount) == 0 && Objects.equals(orderID, order.orderID) && Objects.equals(orderDate, order.orderDate) && Objects.equals(status, order.status);
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Order {
     public static class Builder{
         private  String orderID;
         private Date orderDate;
-        private int totalAmount;
+        private double totalAmount;
         private String status;
 
         public Builder setOrderID(String orderID) {
@@ -78,7 +78,7 @@ public class Order {
             return this;
         }
 
-       public Builder setTotalAmount(int totalAmount){
+       public Builder setTotalAmount(double totalAmount){
            this.totalAmount = totalAmount;
            return this;
        }
