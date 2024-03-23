@@ -15,6 +15,11 @@ public class Helper {
         return false;
     }
 
+    public static boolean isNegative(int b){
+        if(b < 0)
+            return true;
+        return false;
+    }
 
     public static boolean isNegative(double c){
         if(c < 0)
