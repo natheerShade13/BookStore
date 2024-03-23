@@ -26,6 +26,9 @@ public class OrderFactory {
         if (orderDate == null || Helper.isNegative(totalAmount) || Helper.isNullOrEmpty(status)) {
             return null;
         }
+
+        String orderID = Helper.generateID();
+
         return new Order.Builder()
                 .setOrderDate(orderDate)
                 .setTotalAmount(totalAmount)
