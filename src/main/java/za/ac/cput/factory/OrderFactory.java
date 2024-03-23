@@ -27,10 +27,10 @@ public class OrderFactory {
             return null;
         }
 
-        String orderID = Helper.generateID();
+        String orderNum = Helper.generateID();
 
         return new Order.Builder()
-            .setOrderID(orderID)
+                .setOrderID(orderNum)
                 .setOrderDate(orderDate)
                 .setTotalAmount(totalAmount)
                 .setStatus(status)
