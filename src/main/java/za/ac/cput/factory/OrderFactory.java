@@ -12,7 +12,7 @@ import java.util.Date;
 
 public class OrderFactory {
     public static Order createOrder(String orderID, Date orderDate, double totalAmount, String status){
-        if(Helper.isNullOrEmpty(orderID) || orderDate == null || Helper.isNegative(totalAmount) ||Helper.isNullOrEmpty(status)){
+        if(Helper.isNullOrEmpty(orderID) || Helper.isNull(orderDate) || Helper.isNegative(totalAmount) ||Helper.isNullOrEmpty(status)){
             return null;
         }
         return new Order.Builder()
@@ -23,7 +23,7 @@ public class OrderFactory {
                 .build();
     }
     public static Order createOrder(Date orderDate, double totalAmount, String status) {
-        if (orderDate == null || Helper.isNegative(totalAmount) || Helper.isNullOrEmpty(status)) {
+        if (Helper.isNull(orderDate) || Helper.isNegative(totalAmount) || Helper.isNullOrEmpty(status)) {
             return null;
         }
 
