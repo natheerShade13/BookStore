@@ -5,13 +5,14 @@ import za.ac.cput.domain.Book;
 import za.ac.cput.util.Helper;
 
 /*
-
-Author: Natheer Shade 217159109 13/03/2024
-
+BookFactory.java
+BookFactory model class
+Author: Natheer Shade 217159109 https://github.com/natheerShade13
+Date: 13/03/2024
  */
 public class BookFactory {
 
-    public static Book buildBook(String bookID, String title, String author, String genre, int price
+    public static Book buildBook(String bookID, String title, String author, String genre, double price
             , int stockQuant){
         if(Helper.isNullOrEmpty(bookID) || Helper.isNullOrEmpty(title) || Helper.isNullOrEmpty(author)
                 || Helper.isNullOrEmpty(genre) || Helper.isNegative(price) || Helper.isNegative(stockQuant) )
@@ -21,7 +22,7 @@ public class BookFactory {
                 .setPrice(price).setStockQaunt(stockQuant).build();
     }
 
-    public static Book buildBook(String title, String author, String genre, int price, int stockQuant){
+    public static Book buildBook(String title, String author, String genre, double price, int stockQuant){
         if(Helper.isNullOrEmpty(title) || Helper.isNullOrEmpty(author) || Helper.isNullOrEmpty(genre)
                 || Helper.isNegative(price) || Helper.isNegative(stockQuant) )
             return null;
