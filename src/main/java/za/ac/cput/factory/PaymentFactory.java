@@ -14,7 +14,7 @@ Author: Chadwin Kyle Fritz 218068360 15/03/2024
 public class PaymentFactory {
 
     public static Payment createPayment(String paymentID, int amount, Date paymentDate, String paymentMethod) {
-        if (Helper.isNullOrEmpty(paymentID) || Helper.isNegative(amount) || paymentDate == null || Helper.isNullOrEmpty(paymentMethod)) {
+        if (Helper.isNullOrEmpty(paymentID) || Helper.isNegative(amount) || Helper.isNull(paymentDate) || Helper.isNullOrEmpty(paymentMethod)) {
             return null;
         }
 
@@ -27,7 +27,7 @@ public class PaymentFactory {
     }
 
     public static Payment createPayment(int amount, Date paymentDate, String paymentMethod) {
-        if (Helper.isNegative(amount) || paymentDate == null || Helper.isNullOrEmpty(paymentMethod)) {
+        if (Helper.isNegative(amount) || Helper.isNull(paymentDate) || Helper.isNullOrEmpty(paymentMethod)) {
             return null;
         }
 
