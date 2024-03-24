@@ -12,16 +12,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /*
 
-Author: Chadwin Kyle Fritz 218068360 15/03/2024
-
+Author: Chadwin Kyle Fritz 218068360
+Date: 15/03/2024
  */
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class PaymentFactoryTest {
 
-    private final Payment paymentA = PaymentFactory.createPayment("987654", 500, new Date(), "Credit Card");
+    private final Payment paymentA = PaymentFactory.createPayment("987654", 500, new Date()
+            , "Credit Card");
 
-    private final Payment paymentB = PaymentFactory.createPayment(1000, new Date(), "Debit Card");
+    private final Payment paymentB = PaymentFactory.createPayment(1000, new Date()
+            , "Debit Card");
 
     @Test
     @Order(1)
