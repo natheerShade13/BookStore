@@ -7,13 +7,13 @@ import java.util.Date;
 
 /*
 
-Author: Chadwin Kyle Fritz 218068360 15/03/2024
-
+Author: Chadwin Kyle Fritz 218068360
+Date: 15/03/2024
  */
 
 public class PaymentFactory {
 
-    public static Payment createPayment(String paymentID, int amount, Date paymentDate, String paymentMethod) {
+    public static Payment createPayment(String paymentID, double amount, Date paymentDate, String paymentMethod) {
         if (Helper.isNullOrEmpty(paymentID) || Helper.isNegative(amount) || Helper.isNull(paymentDate) || Helper.isNullOrEmpty(paymentMethod)) {
             return null;
         }
@@ -26,7 +26,7 @@ public class PaymentFactory {
                 .build();
     }
 
-    public static Payment createPayment(int amount, Date paymentDate, String paymentMethod) {
+    public static Payment createPayment(double amount, Date paymentDate, String paymentMethod) {
         if (Helper.isNegative(amount) || Helper.isNull(paymentDate) || Helper.isNullOrEmpty(paymentMethod)) {
             return null;
         }

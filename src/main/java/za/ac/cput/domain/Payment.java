@@ -5,15 +5,15 @@ import java.util.Objects;
 
 /*
 
-Author: Chadwin Kyle Fritz 218068360 15/03/2024
-
+Author: Chadwin Kyle Fritz 218068360
+Date: 15/03/2024
  */
 
 public class Payment {
-    private String paymentID;
-    private int amount;
-    private Date paymentDate;
-    private String paymentMethod;
+    private final String paymentID;
+    private final double amount;
+    private final Date paymentDate;
+    private final String paymentMethod;
 
     private Payment(Builder builder) {
         this.paymentID = builder.paymentID;
@@ -26,7 +26,7 @@ public class Payment {
         return paymentID;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
@@ -66,7 +66,7 @@ public class Payment {
 
     public static class Builder {
         private String paymentID;
-        private int amount;
+        private double amount;
         private Date paymentDate;
         private String paymentMethod;
 
@@ -75,7 +75,7 @@ public class Payment {
             return this;
         }
 
-        public Builder setAmount(int amount) {
+        public Builder setAmount(double amount) {
             this.amount = amount;
             return this;
         }

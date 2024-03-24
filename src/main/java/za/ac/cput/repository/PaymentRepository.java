@@ -7,8 +7,8 @@ import java.util.List;
 
 /*
 
-Author: Chadwin Kyle Fritz 218068360 15/03/2024
-
+Author: Chadwin Kyle Fritz 218068360
+Date: 15/03/2024
  */
 
 public class PaymentRepository implements IPaymentRepository {
