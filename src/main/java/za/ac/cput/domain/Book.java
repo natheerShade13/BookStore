@@ -3,9 +3,10 @@ package za.ac.cput.domain;
 import java.util.Objects;
 
 /*
-
-Author: Natheer Shade 217159109 13/03/2024
-
+Book.java
+Book model class
+Author: Natheer Shade 217159109 https://github.com/natheerShade13
+Date: 13/03/2024
  */
 public class Book {
 
@@ -13,7 +14,7 @@ public class Book {
     private final String title;
     private final String author;
     private final String genre;
-    private final int price;
+    private final double price;
     private final int stockQaunt;
 
     public Book(Builder builder){
@@ -23,8 +24,6 @@ public class Book {
         this.genre = builder.genre;
         this.price = builder.price;
         this.stockQaunt = builder.stockQaunt;
-
-
     }
 
     public String getBookID() {
@@ -43,7 +42,7 @@ public class Book {
         return genre;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -82,7 +81,7 @@ public class Book {
         private String title;
         private String author;
         private String genre;
-        private int price;
+        private double price;
         private int stockQaunt;
 
         public Builder setBookId(String bookID) {
@@ -105,7 +104,7 @@ public class Book {
             return this;
         }
 
-        public Builder setPrice(int price) {
+        public Builder setPrice(double price) {
             this.price = price;
             return this;
         }

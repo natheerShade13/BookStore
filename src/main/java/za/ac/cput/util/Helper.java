@@ -4,9 +4,10 @@ import java.util.Date;
 import java.util.UUID;
 
 /*
-
-Author: Natheer Shade 217159109 13/03/2024
-
+Helper.java
+Helper class
+Author: Natheer Shade 217159109 https://github.com/natheerShade13
+Date: 13/03/2024
  */
 public class Helper {
 

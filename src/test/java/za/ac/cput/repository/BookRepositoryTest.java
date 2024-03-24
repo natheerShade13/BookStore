@@ -6,15 +6,21 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Book;
 import za.ac.cput.factory.BookFactory;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+/*
+BookRepository.java
+BookRepositoryTest class
+Author: Natheer Shade 217159109 https://github.com/natheerShade13
+Date: 13/03/2024
+ */
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class BookRepositoryTest {
 
     private static IBookRepository repository = BookRepository.getRepository();
 
-    private Book b1 = BookFactory.buildBook("263850682", "The Gentlemen", "Natheer"
+    private final Book b1 = BookFactory.buildBook("263850682", "The Gentlemen", "Natheer"
             , "Action", 2000, 5);
 
     @Test
