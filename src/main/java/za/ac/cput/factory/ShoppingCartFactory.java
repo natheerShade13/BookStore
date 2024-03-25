@@ -2,7 +2,12 @@ package za.ac.cput.factory;
 import za.ac.cput.domain.ShoppingCart;
 import za.ac.cput.util.Helper;
 
-//221715126
+/*
+ShoppingCartFactory.java
+ShoppingCartFactory class
+Author: Thabo Tshabalala 221715126 https://github.com/Thabo-Tshabalala
+Date: 15/03/2024
+ */
 public class ShoppingCartFactory {
     public static ShoppingCart buildShoppingCart(String cartID, String item) {
         if (Helper.isNullOrEmpty(cartID) || Helper.isNullOrEmpty(item))
