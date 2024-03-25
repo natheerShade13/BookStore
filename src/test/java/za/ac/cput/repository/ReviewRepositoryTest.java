@@ -10,8 +10,11 @@ import za.ac.cput.domain.Review;
 import za.ac.cput.factory.ReviewFactory;
 
 /*
-
-Author: Mmabotse Christinah Mosima 221804854 15/03/2024
+Review.java
+Review model class
+Author: Mmabotse Christinah Mosima (221804854)
+Date: 15/03/2024
+Git url: https://github.com/221804854-mmabotse-christinah
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ReviewRepositoryTest {
