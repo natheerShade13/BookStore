@@ -1,5 +1,13 @@
 package za.ac.cput.factory;
 
+/*
+CustomerFactory.java
+CustomerFactory model class
+Author: Fereshteh Keitumetse Dimpe 221806229
+https://github.com/Keitudimps/BookStore
+Date: 24 March 2024
+ */
+
 import za.ac.cput.domain.Customer;
 import za.ac.cput.util.Helper;
 

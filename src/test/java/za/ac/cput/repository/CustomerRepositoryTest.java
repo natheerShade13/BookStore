@@ -1,4 +1,11 @@
 package za.ac.cput.repository;
+/*
+CustomerRepositoryTest.java
+CustomerRepositoryTest class
+Author: Fereshteh Keitumetse Dimpe 221806229
+https://github.com/Keitudimps/BookStore
+Date: 24 March 2024
+ */
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;

@@ -1,13 +1,17 @@
 package za.ac.cput.factory;
-
+/*
+CustomerFactoryTest.java
+CustomerFactoryTest class
+Author: Fereshteh Keitumetse Dimpe 221806229
+https://github.com/Keitudimps/BookStore
+Date: 24 March 2024
+ */
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Customer;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class CustomerFactoryTest {
-
     @Test
     void TestBuildCustomer() {
         Customer c= CustomerFactory.buildCustomer("3456","keitu",
