@@ -2,6 +2,12 @@ package za.ac.cput.repository;
 import za.ac.cput.domain.ShoppingCart;
 import java.util.ArrayList;
 import java.util.List;
+/*
+ShoppingCartRepository.java
+ShoppingCartRepository class
+Author: Thabo Tshabalala 221715126 https://github.com/Thabo-Tshabalala
+Date: 15/03/2024
+ */
 
 public class ShoppingCartRepository implements IShoppingCartRepository{
     private static IShoppingCartRepository repository = null;

@@ -3,6 +3,12 @@ package za.ac.cput.repository;
 import org.junit.jupiter.api.*;
 import za.ac.cput.domain.ShoppingCart;
 import za.ac.cput.factory.ShoppingCartFactory;
+/*
+ShoppingCartRepositoryTest.java
+ShoppingCartRepositoryTest class
+Author: Thabo Tshabalala 221715126 https://github.com/Thabo-Tshabalala
+Date: 15/03/2024
+ */
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

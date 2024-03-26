@@ -3,6 +3,12 @@ package za.ac.cput.factory;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.ShoppingCart;
 import static org.junit.jupiter.api.Assertions.*;
+/*
+ShoppingCartFactoryTest.javaa
+ShoppingCartFactoryTest class
+Author: Thabo Tshabalala 221715126 https://github.com/Thabo-Tshabalala
+Date: 15/03/2024
+ */
 class ShoppingCartFactoryTest {
 
 

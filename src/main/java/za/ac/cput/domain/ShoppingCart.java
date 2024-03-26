@@ -1,5 +1,10 @@
 package za.ac.cput.domain;
-//221715126
+/*
+ShoppingCart.java
+ShoppingCart Model class
+Author: Thabo Tshabalala 221715126 https://github.com/Thabo-Tshabalala
+Date: 15/03/2024
+ */
 
 import java.util.Objects;
 
