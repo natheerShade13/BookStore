@@ -27,14 +27,14 @@ class PaymentFactoryTest {
 
     @Test
     @Order(1)
-    void testCreatePaymentA() {
+    void testCreatePayment() {
         assertNotNull(paymentA);
         System.out.println(paymentA);
     }
 
     @Test
     @Order(2)
-    void testCreatePaymentB() {
+    void testCreatePaymentFail() {
         assertNotNull(paymentB);
         System.out.println(paymentB);
     }

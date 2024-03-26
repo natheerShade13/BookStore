@@ -20,7 +20,7 @@ class ReviewFactoryTest {
 
     @Test
     @Order(1)
-    void CreateBookReviewA() {
+    void CreateBookReview() {
         Review review1 = ReviewFactory.createBookReview("JB122345", "IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
         assertNotNull(review1);
         System.out.println(review1.toString());
@@ -28,7 +28,7 @@ class ReviewFactoryTest {
 
     @Test
     @Order(2)
-    void buildBookReviewB() {
+    void buildBookReviewFail() {
         Review review2 = ReviewFactory.createBookReview("","IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
         assertNotNull(review2);
         System.out.println(review2.toString());

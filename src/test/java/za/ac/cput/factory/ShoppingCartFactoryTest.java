@@ -19,7 +19,7 @@ class ShoppingCartFactoryTest {
 
 
     @Test
-    void testBuildShoppingCart_1() {
+    void testBuildShoppingCart() {
         assertNotNull(cart1);
         //assertEquals(cartID, cart1.getCartID());
         //assertEquals(item, cart1.getItems());
@@ -30,7 +30,7 @@ class ShoppingCartFactoryTest {
     }
 
 @Test
-    void testBuildShoppingCart_2(){
+    void testBuildShoppingCartFail(){
         assertNotNull(cart2);
         //assertNotSame(cartID, cart2.getCartID());
     System.out.println(cart2);

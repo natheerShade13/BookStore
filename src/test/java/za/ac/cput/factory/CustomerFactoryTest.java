@@ -17,7 +17,7 @@ Date: 24 March 2024
 class CustomerFactoryTest {
 
     @Test
-    void TestBuildCustomerA() {
+    void TestBuildCustomer() {
         Customer c= CustomerFactory.buildCustomer("3456","keitu",
                 "dimpe","kafhm@gmail.com","143 lowry street",
                 "+27 67 789 9875");

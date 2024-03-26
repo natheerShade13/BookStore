@@ -23,14 +23,14 @@ class OrderFactoryTest {
 
     @Test
     @org.junit.jupiter.api.Order(1)
-    void createOrder1() {
+    void createOrder() {
         assertNotNull(order1);
         System.out.println(order1);
     }
 
     @Test
     @org.junit.jupiter.api.Order(2)
-    void testCreateOrder2() {
+    void testCreateOrderFail() {
         assertNotNull(order2);
         System.out.println(order2);
     }

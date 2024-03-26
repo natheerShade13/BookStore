@@ -26,7 +26,7 @@ class BookFactoryTest {
 
     @Test
     @Order(1)
-    void testBuildBookA() {
+    void testBuildBook() {
         assertNotNull(b1);
         System.out.println(b1);
     }
