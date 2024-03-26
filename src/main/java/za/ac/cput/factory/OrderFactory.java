@@ -26,16 +26,13 @@ public class OrderFactory {
             return null;
         }
 
-        String orderID = Helper.generateID();
+        String orderNum = Helper.generateID();
 
         return new Order.Builder()
+                .setOrderID(orderNum)
                 .setOrderDate(orderDate)
                 .setTotalAmount(totalAmount)
                 .setStatus(status)
                 .build();
-    }
-
-    private static String generateOrderID(){
-        return Helper.generateID();
     }
 }
