@@ -26,8 +26,8 @@ class CustomerFactoryTest {
 
     }
     @Test
-    void testBuildCustomerB(){
-        Customer c2= CustomerFactory.buildCustomer("Leago",
+    void testBuildCustomerFail(){
+        Customer c2= CustomerFactory.buildCustomer("","Leago",
                 "Maphothoma","KarinLeaMH@gmail.com","11829 Tima Street",
                 "+27 84 995 9282");
         assertNotNull(c2);

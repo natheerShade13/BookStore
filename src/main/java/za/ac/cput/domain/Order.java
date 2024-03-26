@@ -1,12 +1,13 @@
 package za.ac.cput.domain;
-/*Order.java
-Author: Motlalepula Mbali Kgatlhane
-221684212
-Date: 18 March 2024
- */
 
 import java.util.Date;
 import java.util.Objects;
+
+/*Order.java
+Author: Motlalepula Mbali Kgatlhane (221684212)
+Date: 18 March 2024
+https://github.com/Mbalsss/BookStore+
+ */
 
 public class Order {
     private   String orderID;

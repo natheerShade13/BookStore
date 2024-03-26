@@ -29,7 +29,7 @@ class ReviewFactoryTest {
     @Test
     @Order(2)
     void buildBookReviewB() {
-        Review review2 = ReviewFactory.createBookReview("IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
+        Review review2 = ReviewFactory.createBookReview("","IT ENDS WITH US", "Colleen Hoover", "James Tom", 5, "good book");
         assertNotNull(review2);
         System.out.println(review2.toString());
     }

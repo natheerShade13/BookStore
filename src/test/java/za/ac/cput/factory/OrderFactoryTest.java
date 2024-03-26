@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class OrderFactoryTest {
     private final Order order1 = OrderFactory.createOrder("12345", new Date(), 2000, "Order Received");
 
-    private final Order order2 = OrderFactory.createOrder(new Date(), 1500, "Order Shipped");
+    private final Order order2 = OrderFactory.createOrder("",new Date(), 1500, "Order Shipped");
 
 
     @Test

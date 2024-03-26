@@ -1,14 +1,15 @@
 package za.ac.cput.repository;
-/*OrderRepository.java
-Author: Motlalepula Mbali Kgatlhane
-221684212
-Date: 18 March 2024
- */
 
 import za.ac.cput.domain.Order;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/*Order.java
+Author: Motlalepula Mbali Kgatlhane (221684212)
+Date: 18 March 2024
+https://github.com/Mbalsss/BookStore+
+ */
 
 public class OrderRepository implements IOrderRepository{
     private static IOrderRepository repository = null;

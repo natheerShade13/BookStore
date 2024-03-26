@@ -1,14 +1,15 @@
 package za.ac.cput.factory;
-/*OrderFactory.java
-Author: Motlalepula Mbali Kgatlhane
-221684212
-Date: 18 March 2024
- */
 
 import za.ac.cput.domain.Order;
 import za.ac.cput.util.Helper;
 
 import java.util.Date;
+
+/*Order.java
+Author: Motlalepula Mbali Kgatlhane (221684212)
+Date: 18 March 2024
+https://github.com/Mbalsss/BookStore+
+ */
 
 public class OrderFactory {
     public static Order createOrder(String orderID, Date orderDate, double totalAmount, String status){

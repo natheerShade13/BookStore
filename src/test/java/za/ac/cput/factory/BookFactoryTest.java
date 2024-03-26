@@ -21,7 +21,7 @@ class BookFactoryTest {
             , "Fantasy", 1500, 3);
 
 
-    private final Book b2 = BookFactory.buildBook("Solo Leveling", "Natheer"
+    private final Book b2 = BookFactory.buildBook("","Solo Leveling", "Natheer"
             , "Fantasy", 500, 10);
 
     @Test
@@ -33,7 +33,7 @@ class BookFactoryTest {
 
     @Test
     @Order(2)
-    void testBuildBookB() {
+    void testBuildBookFail() {
         assertNotNull(b2);
         System.out.println(b2);
     }
