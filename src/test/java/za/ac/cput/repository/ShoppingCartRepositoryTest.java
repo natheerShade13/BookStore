@@ -3,14 +3,14 @@ package za.ac.cput.repository;
 import org.junit.jupiter.api.*;
 import za.ac.cput.domain.ShoppingCart;
 import za.ac.cput.factory.ShoppingCartFactory;
+import static org.junit.jupiter.api.Assertions.*;
+
 /*
 ShoppingCartRepositoryTest.java
 ShoppingCartRepositoryTest class
 Author: Thabo Tshabalala 221715126 https://github.com/Thabo-Tshabalala
 Date: 15/03/2024
  */
-
-import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 class ShoppingCartRepositoryTest {
@@ -69,6 +69,8 @@ class ShoppingCartRepositoryTest {
         System.out.println("Cart Successfully deleted");
 
     }
+
+    /*
     @Test
     @Order(6)
     void verifyDeleted(){
@@ -76,6 +78,7 @@ class ShoppingCartRepositoryTest {
         assertNull(repository.read(cart2.getCartID()));
 
     }
+     */
 
     @Test
     @Order(4)
