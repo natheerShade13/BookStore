@@ -1,7 +1,6 @@
 package za.ac.cput.repository;
 /*OrderRepositoryTest.java
-Author: Motlalepula Mbali Kgatlhane
-221684212
+Author: Motlalepula Mbali Kgatlhane (221684212)
 Date: 18 March 2024
  */
 import org.junit.jupiter.api.MethodOrderer;
