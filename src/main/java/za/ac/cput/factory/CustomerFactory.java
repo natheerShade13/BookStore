@@ -3,6 +3,14 @@ package za.ac.cput.factory;
 import za.ac.cput.domain.Customer;
 import za.ac.cput.util.Helper;
 
+/*
+Customer.java
+Customer model class
+Author: Fereshteh Keitumetse Dimpe 221806229
+https://github.com/Keitudimps/BookStore
+Date: 24 March 2024
+ */
+
 public class CustomerFactory {
     public static Customer buildCustomer(String customerID, String firstName, String lastName, String email, String address, String cellNumber) {
         if (Helper.isNullOrEmpty(customerID) || Helper.isNullOrEmpty(firstName)

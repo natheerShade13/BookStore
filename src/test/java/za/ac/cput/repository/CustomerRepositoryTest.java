@@ -8,6 +8,15 @@ import za.ac.cput.factory.CustomerFactory;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
+
+/*
+Customer.java
+Customer model class
+Author: Fereshteh Keitumetse Dimpe 221806229
+https://github.com/Keitudimps/BookStore
+Date: 24 March 2024
+ */
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class CustomerRepositoryTest {
     private static ICustomerRepository repository=CustomerRepository.getRepository();

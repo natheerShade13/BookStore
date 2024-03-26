@@ -2,6 +2,14 @@ package za.ac.cput.domain;
 
 import java.util.Objects;
 
+/*
+Customer.java
+Customer model class
+Author: Fereshteh Keitumetse Dimpe 221806229
+https://github.com/Keitudimps/BookStore
+Date: 24 March 2024
+ */
+
 public class Customer {
     private String customerID;
     private String firstName;
