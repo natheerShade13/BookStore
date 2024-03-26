@@ -10,8 +10,8 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 
 /*
-Customer.java
-Customer model class
+CustomerRepositoryTest.java
+Customer repository test class
 Author: Fereshteh Keitumetse Dimpe 221806229
 https://github.com/Keitudimps/BookStore
 Date: 24 March 2024

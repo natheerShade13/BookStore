@@ -1,19 +1,17 @@
 package za.ac.cput.factory;
-/*OrderFactoryTest.java
-Author: Motlalepula Mbali Kgatlhane
-221684212
-Date: 18 March 2024
- */
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Order;
-
-
 import java.util.Date;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+/*OrderFactoryTest.java
+Author: Motlalepula Mbali Kgatlhane (221684212)
+Date: 18 March 2024
+https://github.com/Mbalsss/BookStore+
+ */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class OrderFactoryTest {
     private final Order order1 = OrderFactory.createOrder("12345", new Date(), 2000, "Order Received");

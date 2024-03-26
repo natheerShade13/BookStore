@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
-Customer.java
-Customer model class
+CustomerRepository.java
+Customer repository class
 Author: Fereshteh Keitumetse Dimpe 221806229
 https://github.com/Keitudimps/BookStore
 Date: 24 March 2024

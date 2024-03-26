@@ -4,7 +4,7 @@ import za.ac.cput.domain.Order;
 
 import java.util.List;
 
-/*Order.java
+/*IOrderRepository.java
 Author: Motlalepula Mbali Kgatlhane (221684212)
 Date: 18 March 2024
 https://github.com/Mbalsss/BookStore+

@@ -4,8 +4,8 @@ import za.ac.cput.domain.Customer;
 import za.ac.cput.util.Helper;
 
 /*
-Customer.java
-Customer model class
+CustomerFactory.java
+Customer factory class
 Author: Fereshteh Keitumetse Dimpe 221806229
 https://github.com/Keitudimps/BookStore
 Date: 24 March 2024

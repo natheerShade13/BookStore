@@ -10,8 +10,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /*
 BookRepository.java
-BookRepositoryTest class
-Author: Natheer Shade 217159109 https://github.com/natheerShade13
+Book repository test class
+Author: Natheer Shade 217159109
+https://github.com/natheerShade13
 Date: 13/03/2024
  */
 

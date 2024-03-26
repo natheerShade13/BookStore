@@ -2,8 +2,9 @@ package za.ac.cput.repository;
 
 /*
 IRepository.java
-IRepository interface
-Author: Natheer Shade 217159109 https://github.com/natheerShade13
+Repository interface
+Author: Natheer Shade 217159109
+https://github.com/natheerShade13
 Date: 13/03/2024
  */
 

@@ -7,8 +7,8 @@ import za.ac.cput.domain.Customer;
 import static org.junit.jupiter.api.Assertions.*;
 
 /*
-Customer.java
-Customer model class
+CustomerFactoryTest.java
+Customer factory test class
 Author: Fereshteh Keitumetse Dimpe 221806229
 https://github.com/Keitudimps/BookStore
 Date: 24 March 2024

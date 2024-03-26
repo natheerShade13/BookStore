@@ -11,8 +11,10 @@ import java.util.Date;
 import static org.junit.jupiter.api.Assertions.*;
 
 /*
-
+PaymentFactoryTest.java
+Payment factory test class
 Author: Chadwin Kyle Fritz 218068360
+https://github.com/ChadwinFritz
 Date: 15/03/2024
  */
 

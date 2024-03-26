@@ -5,8 +5,8 @@ import za.ac.cput.domain.Customer;
 import java.util.List;
 
 /*
-Customer.java
-Customer model class
+ICustomerRepository.java
+Customer repository interface
 Author: Fereshteh Keitumetse Dimpe 221806229
 https://github.com/Keitudimps/BookStore
 Date: 24 March 2024

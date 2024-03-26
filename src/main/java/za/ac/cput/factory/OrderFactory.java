@@ -5,7 +5,7 @@ import za.ac.cput.util.Helper;
 
 import java.util.Date;
 
-/*Order.java
+/*OrderFactory.java
 Author: Motlalepula Mbali Kgatlhane (221684212)
 Date: 18 March 2024
 https://github.com/Mbalsss/BookStore+

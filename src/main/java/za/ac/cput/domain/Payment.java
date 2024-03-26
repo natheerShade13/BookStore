@@ -4,8 +4,10 @@ import java.util.Date;
 import java.util.Objects;
 
 /*
-
+Payment.java
+Payment model class
 Author: Chadwin Kyle Fritz 218068360
+https://github.com/ChadwinFritz
 Date: 15/03/2024
  */
 

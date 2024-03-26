@@ -9,8 +9,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /*
 BookFactoryTest.java
-BookFactoryTest class
-Author: Natheer Shade 217159109 https://github.com/natheerShade13
+Book factory test class
+Author: Natheer Shade 217159109
+https://github.com/natheerShade13
 Date: 13/03/2024
  */
 

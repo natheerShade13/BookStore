@@ -7,8 +7,9 @@ import java.util.List;
 
 /*
 BookRepository.java
-BookRepository model class
-Author: Natheer Shade 217159109 https://github.com/natheerShade13
+Book Repository class
+Author: Natheer Shade 217159109
+https://github.com/natheerShade13
 Date: 13/03/2024
  */
 
