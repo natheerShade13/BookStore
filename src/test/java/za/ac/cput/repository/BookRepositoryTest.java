@@ -21,7 +21,7 @@ class BookRepositoryTest {
 
     private static IBookRepository repository = BookRepository.getRepository();
 
-    private final Book b1 = BookFactory.buildBook("263850682", "The Gentlemen", "Natheer"
+    private Book b1 = BookFactory.buildBook("263850682", "The Gentlemen", "Natheer"
             , "Action", 2000, 5);
 
     @Test

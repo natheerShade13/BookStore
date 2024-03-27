@@ -17,7 +17,7 @@ class ShoppingCartRepositoryTest {
 
     private static IShoppingCartRepository repository= ShoppingCartRepository.getRepository();
     private ShoppingCart cart1 = ShoppingCartFactory.buildShoppingCart("876543","Apple Munch");
-    private ShoppingCart cart2 = ShoppingCartFactory.buildShoppingCart("54654","Rose");
+    private ShoppingCart cart2 = ShoppingCartFactory.buildShoppingCart("546546","Rose");
 
 
     @Test
@@ -25,9 +25,10 @@ class ShoppingCartRepositoryTest {
     void create() {
         ShoppingCart add = repository.create(cart1);
         assertNotNull(add);
+        System.out.println(add);
         ShoppingCart add2 = repository.create(cart2);
         assertNotNull(add2);
-
+        System.out.println(add2);
     }
 
     @Test
@@ -69,16 +70,6 @@ class ShoppingCartRepositoryTest {
         System.out.println("Cart Successfully deleted");
 
     }
-
-    /*
-    @Test
-    @Order(6)
-    void verifyDeleted(){
-        assertNull(repository.read(cart1.getCartID()));
-        assertNull(repository.read(cart2.getCartID()));
-
-    }
-     */
 
     @Test
     @Order(4)
