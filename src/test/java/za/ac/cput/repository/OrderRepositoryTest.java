@@ -18,7 +18,7 @@ https://github.com/Mbalsss/BookStore+
 class OrderRepositoryTest {
     private static IOrderRepository repository = OrderRepository.getRepository();
 
-    private final Order order1 = OrderFactory.createOrder("12345",new Date(), 1500,"Order Shipped");
+    private Order order1 = OrderFactory.createOrder("12345",new Date(), 1500,"Order Shipped");
 
     @Test
     @org.junit.jupiter.api.Order(4)

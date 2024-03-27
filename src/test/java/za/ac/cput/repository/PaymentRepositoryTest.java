@@ -24,7 +24,8 @@ class PaymentRepositoryTest {
 
     private static IPaymentRepository repository = PaymentRepository.getRepository();
 
-    private final Payment paymentA = PaymentFactory.createPayment("987654", 500, new Date(), "Credit Card");
+    private Payment paymentA = PaymentFactory.createPayment("987654", 500, new Date()
+            , "Credit Card");
 
     @Test
     @Order(4)
@@ -51,7 +52,7 @@ class PaymentRepositoryTest {
 
     @Test
     @Order(3)
-    void copy() {
+    void update() {
         Payment newPayment = new Payment.Builder()
                 .copy(paymentA)
                 .setAmount(750)
