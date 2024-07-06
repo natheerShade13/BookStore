@@ -11,12 +11,14 @@ Date: 13/03/2024
  */
 public class Book {
 
-    private final String bookID;
-    private final String title;
-    private final String author;
-    private final String genre;
-    private final double price;
-    private final int stockQaunt;
+    private  String bookID;
+    private  String title;
+    private  String author;
+    private  String genre;
+    private  double price;
+    private  int stockQuantity;
+
+    protected Book(){}
 
     public Book(Builder builder){
         this.bookID = builder.bookID;
@@ -24,7 +26,7 @@ public class Book {
         this.author = builder.author;
         this.genre = builder.genre;
         this.price = builder.price;
-        this.stockQaunt = builder.stockQaunt;
+        this.stockQuantity = builder.stockQaunt;
     }
 
     public String getBookID() {
@@ -47,8 +49,8 @@ public class Book {
         return price;
     }
 
-    public int getStockQaunt() {
-        return stockQaunt;
+    public int getStockQuantity() {
+        return stockQuantity;
     }
 
     @Override
@@ -56,12 +58,12 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return price == book.price && stockQaunt == book.stockQaunt && Objects.equals(bookID, book.bookID) && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(genre, book.genre);
+        return price == book.price && stockQuantity == book.stockQuantity && Objects.equals(bookID, book.bookID) && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(genre, book.genre);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(bookID, title, author, genre, price, stockQaunt);
+        return Objects.hash(bookID, title, author, genre, price, stockQuantity);
     }
 
     @Override
@@ -72,7 +74,7 @@ public class Book {
                 ", author='" + author + '\'' +
                 ", genre='" + genre + '\'' +
                 ", price=" + price +
-                ", stockQaunt=" + stockQaunt +
+                ", stockQaunt=" + stockQuantity +
                 '}';
     }
 
@@ -121,7 +123,7 @@ public class Book {
             this.author = book.author;
             this.genre = book.genre;
             this.price = book.price;
-            this.stockQaunt = book.stockQaunt;
+            this.stockQaunt = book.stockQuantity;
             return this;
         }
 
